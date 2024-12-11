@@ -1,5 +1,5 @@
 const express = require("express");
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcryptjs");
 const router = express.Router();
 
 const pool = require("../../data/dataBase.js");
@@ -34,7 +34,7 @@ router.post("/register", async (req, res) => {
     const [existingUser] = await pool.query(existingUserQuery, [email]);
 
     if (existingUser.length > 0) {
-      const passwordMatch = await bcrypt.compare(
+      const passwordMatch = await bcryptjs.compare(
         password,
         existingUser[0].password
       );
@@ -46,7 +46,7 @@ router.post("/register", async (req, res) => {
       }
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcryptjs.hash(password, 10);
 
     console.log("Parsed data with hashed password:", {
       finalName,

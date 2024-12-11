@@ -1,5 +1,5 @@
 const express = require("express");
-const bcrypt = require("bcrypt"); // For hashing passwords
+const bcryptjs = require("bcryptjs"); // For hashing passwords
 const router = express.Router();
 
 const pool = require("../../data/dataBase.js"); // Assuming you create a shared DB connection module
@@ -34,7 +34,7 @@ router.post("/register", async (req, res) => {
 
   try {
     // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10); // 10 is the salt rounds, you can adjust this
+    const hashedPassword = await bcryptjs.hash(password, 10); // 10 is the salt rounds, you can adjust this
 
     // Debugging: Log the parsed data before executing query
     console.log("Parsed data with hashed password:", {

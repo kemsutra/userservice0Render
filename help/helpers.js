@@ -1,7 +1,7 @@
 // helpers.js
 require("dotenv").config();
 
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // Function to clean answers by removing special characters
@@ -67,7 +67,7 @@ function generateToken(user, options = {}) {
 
 // Function to compare passwords during login
 function comparePassword(password, hashedPassword) {
-  return bcrypt.compare(password, hashedPassword);
+  return bcryptjs.compare(password, hashedPassword);
 }
 
 function processUserDetails(userId, body, res) {
