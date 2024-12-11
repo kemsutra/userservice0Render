@@ -9,12 +9,12 @@ const stripe = require("stripe")(
 );
 
 // Importing routes
-const authRoutes = require("../src/routes/authRoutes.js");
-const userRoutes = require("../src/routes/userRoutes");
-const paymentRoutes = require("../src/routes/paymentRoutes");
-const detailsRoutes = require("../src/routes/detailsRoutes");
-const registerRoutes = require("../src/routes/registerRoutes");
-const stripeRoutes = require("../src/routes/stripeRoutes.js");
+const authRoutes = require("./routes/authRoutes.js");
+const userRoutes = require("./routes/userRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
+const detailsRoutes = require("./routes/detailsRoutes");
+const registerRoutes = require("./routes/registerRoutes");
+const stripeRoutes = require("./routes/stripeRoutes.js");
 
 const port = process.env.PORT || 3000;
 const app = express();
