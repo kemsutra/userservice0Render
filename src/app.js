@@ -9,13 +9,12 @@ const stripe = require("stripe")(
 );
 
 // Importing routes
-const authRoutes = require("./routes/authRoutes");
-const userRoutes = require("./routes/userRoutes");
-const paymentRoutes = require("./routes/paymentRoutes");
-const detailsRoutes = require("./routes/detailsRoutes");
-const registerRoutes = require("./routes/registerRoutes");
-const learningRoutes = require("./routes/learningRoutes");
-const stripeRoutes = require("./routes/stripeRoutes.js");
+const authRoutes = require("../routes/authRoutes.js");
+const userRoutes = require("../routes/userRoutes");
+const paymentRoutes = require("../routes/paymentRoutes");
+const detailsRoutes = require("../routes/detailsRoutes");
+const registerRoutes = require("../routes/registerRoutes");
+const stripeRoutes = require("../routes/stripeRoutes.js");
 
 const port = process.env.PORT || 3000;
 const app = express();
@@ -76,9 +75,7 @@ app.use("/api", userRoutes);
 app.use("/api", paymentRoutes);
 app.use("/api", detailsRoutes);
 app.use("/api", registerRoutes);
-app.use("/api", learningRoutes);
 app.use("/api", stripeRoutes);
-// Added this line for learning routes
 
 // Global error-handling middleware
 app.use((err, req, res, next) => {
