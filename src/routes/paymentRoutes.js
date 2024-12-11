@@ -1,6 +1,6 @@
 // routes/paymentRoutes.js
 const express = require("express");
-const pool = require("../data/dataBase");
+const pool = require("../../data/dataBase");
 
 const router = express.Router();
 

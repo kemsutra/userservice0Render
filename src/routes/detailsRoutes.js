@@ -1,5 +1,5 @@
 const express = require("express");
-const { processAnswer, cleanAnswer } = require("../help/helpers");
+const { processAnswer, cleanAnswer } = require("../../help/helpers");
 
 const router = express.Router();
 

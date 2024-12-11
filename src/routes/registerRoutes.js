@@ -2,8 +2,8 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const router = express.Router();
 
-const pool = require("../data/dataBase.js");
-const { processUserDetails } = require("../help/helpers");
+const pool = require("../../data/dataBase.js");
+const { processUserDetails } = require("../../help/helpers");
 
 require("dotenv").config();
 

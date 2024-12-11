@@ -2,8 +2,8 @@ const express = require("express");
 const bcrypt = require("bcrypt"); // For hashing passwords
 const router = express.Router();
 
-const pool = require("../data/dataBase.js"); // Assuming you create a shared DB connection module
-const { processUserDetails } = require("../help/helpers"); // Moving common functions to helpers
+const pool = require("../../data/dataBase.js"); // Assuming you create a shared DB connection module
+const { processUserDetails } = require("../../help/helpers"); // Moving common functions to helpers
 
 require("dotenv").config();
 

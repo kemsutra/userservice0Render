@@ -1,7 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
-const { generateToken, comparePassword } = require("../help/helpers");
+const { generateToken, comparePassword } = require("../../help/helpers");
 
 const router = express.Router();
 
