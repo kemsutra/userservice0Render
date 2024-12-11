@@ -3,7 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 const stripe = require("stripe")(
   "sk_test_51QPRv6RwTc0oih015LCjKU9SAmvzCYoAOaGUGQFWJ5AnOOIP0Baw5ee9cmrn4Xg5nnW8XV2sKw4YU9Vu1uR77BSG00dk7Mx569"
 );
